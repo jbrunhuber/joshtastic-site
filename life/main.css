@@ -1,0 +1,19 @@
+body {
+    margin: 10%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+h1 {
+    font-size: 25vw;
+    font-weight: 200;
+    margin: 0;
+}
+
+h1::after, p.smallprint::before {
+    content: '*';
+}
+
+p {
+    font-size: 11px;
+    color: #333;
+}
