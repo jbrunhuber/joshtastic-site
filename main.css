@@ -44,16 +44,17 @@ h1 {
     text-align: center;
 }
 
-h2 {
-    color: #D89233;
+h2, .language {   
     font-family: 'Source Code Pro',"Monaco", "Consolas", "Droid Sans Mono", monospace;
     font-weight: 100;
 }
 
 .language {
-    font-family: 'Source Code Pro',"Monaco", "Consolas", "Droid Sans Mono", monospace;
-    font-weight: 100;
     color: #888;
+}
+
+h2 {
+    color: #D89233;
 }
 
 .contact {
