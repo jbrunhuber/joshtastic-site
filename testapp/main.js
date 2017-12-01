@@ -6,5 +6,5 @@ $(function() {
     // Falls bei dem Apple irgendwas schief geht trotzdem auf jeden Fall das Ziel anspringen
     setTimeout(function() {
                 window.location.href = "https://google.com";
-            }, 500);
+            }, 5000);
 });
