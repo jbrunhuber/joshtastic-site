@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <title>Josh's Github</title>
+    <meta name="description" content="My superamazing github page">
+    <meta name="author" content="Joshua Brunhuber">
+    <meta name="keywords" content="Joshua Brunhuber,github,runway compiler">
+    <meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,width=device-width,user-scalable=no" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Code+Pro" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
+    <link rel="stylesheet" href="highlightjs/styles/darcula.css">
+    <link href="main.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navigation">
+        <ul>
+            <li><a href="https://github.com/jbrunhuber"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a></li>
+            <li><a href="https://twitter.com/jbrunhuber"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+            <li><a href="https://medium.com/joshtastic-blog"><i class="fa fa-medium" aria-hidden="true"></i> Blog</a></li>
+        </ul>
+    </nav>
+    <div class="page-logo">
+        <i class="fa fa-github" aria-hidden="true"></i>
+    </div>
+    <main class="main">
+        <h1>Josh's GitHub</h1>
+        <section class="about">
+            <h2>About me</h2>
+            <p>Hi, I'm josh. I'm a software developer (JEE, iOS and MacOS) from germany. I share some various projects and little helper libraries here. Feel free to get in touch with me.</p>
+            <aside class="contact">
+                <a href="mailto:joshua.brunhuber@gmail.com"><i class="fa fa-inbox" aria-hidden="true"></i> joshua.brunhuber@me.com</a>
+            </aside>
+        </section>
+        <section class="runway">
+            <h2>Runway Compiler</h2>
+            <span class="language">C++</span>
+            <p>Runway is an approach to create a small script-like programming language with native-code output. The project includes the compiler frontend which contains the tokenizer, parser and code-generator. The output is LLVM-IR (bytecode). The final conversion to the target machine code instructions will be done by the LLVM static compiler <a href="http://llvm.org/docs/CommandGuide/llc.html">LLVM static compiler</a>.</p>
+            <h3>Runway LLVM IR output example</h3>
+            <pre>
+                <code class="llvm-ir">
+;declare c puts function
+declare  i32 @puts(i8*) 
+
+;create global string constant (12 chars with one byte each)
+@global_str = constant [12 x i8] c"joshtastic\00"
+
+;define entry point
+define i32 @main { 
+
+  ;call the puts function with the string-constant
+  call i32 @puts( [12 x i8] @global_str )
+  
+  ;return exit code 0
+  ret i32 0 
+}
+                </code>
+            </pre>
+            <h3>Libraries used</h3>
+            <ul>
+                <li><a href="https://github.com/google/googletest">gtest - An unit testing framework from google</a></li>
+                <li><a href="http://llvm.org/Features.html">LLVM C++ Library</a></li>
+            </ul>
+            <h3>Install the dependencies</h3>
+            <p>If you want to build runway compiler on your system you'll need to install its dependencies. Read the documentation <a href="https://github.com/jbrunhuber/runway-compiler/wiki/Install-llvm-on-osx-or-linux">here</a> for unix(-like) systems.</p>
+        </section>
+        <section class="csvwriter">
+            <h2>Generic CSV Writer</h2>
+            <span class="language">Java</span>
+            <p>CSV-Writer is a tiny library that helps to export CSV-Data. It's designed to be highly extensible by the user to create custom transformers.</p>
+         
+            <div class="ci-badge">
+                <img src="https://ci.appveyor.com/api/projects/status/2h5w5tbbixyv4vcm?svg=true" />
+            </div>
+
+            <pre>
+            <div class="wrap">
+                <code class="java">
+class Bean {
+
+    @CsvEntry(0)
+    String name;
+
+    @CsvEntry(1)
+    String homeCountry;
+
+    @CsvEntry(2)
+    float price;
+}
+                </code>
+        </div>
+            </pre>
+        </section>
+    </main>
+    <footer>
+        <p>© Copyright 2017, Joshua Brunhuber</p>
+    </footer>
+    <script src="highlightjs/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+</html>
