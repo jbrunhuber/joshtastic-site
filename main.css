@@ -123,4 +123,5 @@ p {
     background: linear-gradient(to bottom right, #e3119a 0%, #ff3725 100%);
     line-height: 2.5;
     cursor: default;
+    white-space: nowrap;
 }
