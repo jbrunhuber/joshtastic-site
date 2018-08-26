@@ -100,3 +100,20 @@ p {
         margin: 15% 5%;
     }
 }
+
+.job-technologies {
+    margin: 0% 0% 5% 0%;
+}
+
+.job-technologies span {
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0.3em 1em;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    border-radius: 16px;
+    background: linear-gradient(to bottom right, #e3119a 0%, #ff3725 100%);
+    line-height: 2.5;
+    cursor: default;
+}
