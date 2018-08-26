@@ -46,6 +46,45 @@ ul > li {
     margin: 1em 0;
 }
 
+p {
+    font-family: "Avenir Next",'AvenirNext-Regular','Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+}
+
+.profilePic {
+    width: 180px;
+    border-radius: 15px;
+}
+
+.job {
+    text-align: left;
+}
+
+.job a {
+    color: #007cce;
+}
+
+.job-title {
+    font-weight: 600;
+}
+
+.job-date-range {
+    color: #808080;
+    font-size: 13px;
+    margin-top: 0.4em;
+}
+
+.job-description a {
+    color: #666;
+}
+
+.job-description a:hover {
+    color: #000;
+}
+
+#resume {
+    margin: 10% 25%;
+}
+
 @media only screen and (max-width: 600px) {
     
     h1 {
@@ -56,13 +95,8 @@ ul > li {
     .about {
         margin: 3em 0;
     }
-}
 
-p {
-    font-family: "Avenir Next",'AvenirNext-Regular','Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
-}
-
-.profilePic {
-    width: 180px;
-    border-radius: 15px;
+    #resume {
+        margin: 15% 5%;
+    }
 }
