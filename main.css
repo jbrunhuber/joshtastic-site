@@ -125,3 +125,20 @@ p {
     cursor: default;
     white-space: nowrap;
 }
+
+#contact {
+    color: #999;
+}
+
+#contact a {
+    color: #666;
+    font-weight: 600;
+}
+
+#contact a:hover {
+    color: #000;
+}
+
+#links {
+    margin-bottom: 3em;
+}
