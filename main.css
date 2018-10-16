@@ -142,3 +142,12 @@ p {
 #links {
     margin-bottom: 3em;
 }
+
+.disclaimer {
+    margin: 1em 0;
+}
+
+.disclaimer a {
+    color: #333;
+    text-decoration: none;
+}
